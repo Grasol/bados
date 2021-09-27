@@ -27,7 +27,7 @@ unsigned short HAL_portInWord(unsigned short port) {
 }
 
 unsigned int HAL_portInDWord(unsigned short port) {
-  unsigned char v = 0;
+  unsigned int v = 0;
   __asm( "in eax, dx" : : "eax" (v), "dx" (port) );
   return v;
 }
